@@ -14,11 +14,8 @@ def main():
         choice = input("Seçiminiz (1-5): ")
 
         if choice == '1':
-            title = input("Kitap Başlığı: ")
-            author = input("Yazar: ")
-            isbn = input("ISBN: ")
-            lib.add_book(Book(title, author, isbn))
-            print("Kitap başarıyla eklendi!")
+            isbn = input("Eklenecek kitabın ISBN'i: ")
+            lib.add_book(isbn) # Artık sadece isbn gönderiyoruz
 
         elif choice == '2':
             isbn = input("Silinecek kitabın ISBN'i: ")
