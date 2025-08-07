@@ -30,7 +30,7 @@ def add_book_by_isbn(isbn_model: ISBNModel):
     Request body'sinde bir ISBN alır, Open Library'den verileri çeker
     ve kitabı kütüphaneye ekler.
     """ [cite: 91]
-    success = lib.add_book(isbn_model.isbn)
+    success = lib.add_book_by_isbn(isbn_model.isbn)
     if not success:
         raise HTTPException(status_code=404, detail=f"ISBN {isbn_model.isbn} ile kitap bulunamadı veya eklenemedi.")
     

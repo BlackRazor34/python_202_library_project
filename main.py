@@ -15,7 +15,7 @@ def main():
 
         if choice == '1':
             isbn = input("Eklenecek kitabın ISBN'i: ")
-            lib.add_book(isbn) # Artık sadece isbn gönderiyoruz
+            lib.add_book_by_isbn(isbn)
 
         elif choice == '2':
             isbn = input("Silinecek kitabın ISBN'i: ")
