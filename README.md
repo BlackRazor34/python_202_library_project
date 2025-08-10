@@ -11,11 +11,12 @@ Ayrıca HTML/JS tabanlı basit bir arayüz ile görsel kullanım sağlar.
 ## 📋 İçindekiler  
 - [Özellikler](#Özellikler)  
 - [Kurulum](#kurulum)  
-- [kullanım](#kullanım)  
-- [Test Senaryoları](#test-senaryoları)  
-- [Test Çalıştırma](#test-çalıştırma)  
-- [Docker ile Çalıştırma](#docker-ile-çalıştırma)
-- [Lisans](#lisans)
+- [kullanım](#Kullanım) 
+- [HTML Arayüzü](#HTML-Arayüzü)  
+- [Test Senaryoları](#Test Senaryoları) 
+- [Test Çalıştırma](#Test Çalıştırma) 
+- [Docker ile Çalıştırma](#Docker ile Çalıştırma)
+- [Lisans](#Lisans)
 
 ---
 
