@@ -1,8 +1,24 @@
+![Lisans](https://img.shields.io/badge/lisans-MIT-mavi)
+![Versiyon](https://img.shields.io/badge/versiyon-1.0.0-turuncu)
+
+
 # 📚 Python 202 Library Project
 
 Bu proje, **Global AI Hub Python 202 Bootcamp** kapsamında geliştirilmiş bir kütüphane yönetim sistemidir.
 **FastAPI** ve **SQLite** kullanarak kitap ekleme, listeleme, güncelleme ve silme işlemlerini yapan bir REST API’dir.  
 Ayrıca HTML/JS tabanlı basit bir arayüz ile görsel kullanım sağlar. 
+
+## 📋 İçindekiler  
+- [Özellikler](#Özellikler)  
+- [Kurulum](#kurulum)  
+- [kullanım](#kullanım)  
+- [Test Senaryoları](#test-senaryoları)  
+- [Test Çalıştırma](#test-çalıştırma)  
+- [Docker ile Çalıştırma](#docker-ile-çalıştırma)
+- [Lisans](#lisans)
+
+---
+
 
 ## 🚀 Özellikler
 
