@@ -93,10 +93,10 @@ API ile etkileşimli bir arayüz için `index.html` dosyasını tarayıcıda aç
 ## 📷 Ekran Görüntüleri
 
 ### Swagger UI
-![Swagger UI](docs/swagger_screenshot.png)
+![Swagger UI](Pic\resim1.png)
 
 ### HTML Arayüz
-![HTML UI](docs/html_ui.png)
+![HTML UI](Pic\resim2.png)
 
 ---
 
