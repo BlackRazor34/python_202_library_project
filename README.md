@@ -38,6 +38,7 @@ pip install -r requirements.txt
 python main.py
 ```
 
+
 ### Aşama 3: API Sunucusunu Başlatma
 
 ```bash
@@ -51,10 +52,13 @@ Sunucu çalıştıktan sonra Swagger UI arayüzüne şu adresten erişebilirsini
 
 ## 🖥 HTML Arayüzü
 
-'''bash
-index.html 
-'''
-dosyasını tarayıcıda açarak API’yi görsel olarak kullanabilirsiniz.
+API ile etkileşimli bir arayüz için `index.html` dosyasını bir web tarayıcısında açabilirsiniz. Bunun için:
+
+1. Proje dizinindeki `index.html` dosyasını bulun.
+2. Dosyayı doğrudan tarayıcınızda açın (örneğin, `file://<proje-yolu>/index.html`).
+3. API sunucusunun çalıştığından emin olun (`uvicorn api:app --reload`).
+
+**Not**: HTML arayüzü, API ile iletişim kurar; bu nedenle API sunucusunun çalıştığından emin olun.
 
 ---
 
@@ -64,33 +68,37 @@ dosyasını tarayıcıda açarak API’yi görsel olarak kullanabilirsiniz.
 python test_library.py
 ```
 
-## 🧪 Test Çalıştırma
-
-'''bash
-pip install pytest
-pytest -v
-'''
-
 ---
 
-Testler şunları kapsar:
-- Kitap ekleme/silme
-- JSON dosyasına kaydetme/yükleme
+
+## 🧪 Test Çalıştırma
+
+Proje, aşağıdaki senaryoları kapsayan otomatik testler içerir:
+- Kitap ekleme ve silme
+- JSON dosyasına kaydetme ve yükleme
 - ISBN ile doğru eşleşme
+
+Testleri çalıştırmak için aşağıdaki komutu kullanın:
+```bash
+pytest -v
+```
 
 ---
 
 ## 🐳 Docker ile Çalıştırma
 
-'''bash
+Aşağıdaki komutlarla projeyi Docker kullanarak çalıştırabilirsiniz:
 
+```bash
+# Docker imajını oluştur
 docker build -t kutuphane-api .
-docker run -p 8000:8000 kutuphane-api
 
-'''
+
+# Docker konteynerini başlat (API 8000 portunda çalışır)
+docker run -p 8000:8000 kutuphane-api
+```
 
 ---
-
 
 ## Lisans  
 MIT Lisansı altında dağıtılmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakın.
