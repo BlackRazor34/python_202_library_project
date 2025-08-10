@@ -1,10 +1,19 @@
 # 📚 Python 202 Library Project
 
-Bu proje, **Global AI Hub Python 202 Bootcamp** kapsamında geliştirilmiş bir kütüphane yönetim sistemidir. Proje 3 aşamadan oluşur:
+Bu proje, **Global AI Hub Python 202 Bootcamp** kapsamında geliştirilmiş bir kütüphane yönetim sistemidir.
+**FastAPI** ve **SQLite** kullanarak kitap ekleme, listeleme, güncelleme ve silme işlemlerini yapan bir REST API’dir.  
+Ayrıca HTML/JS tabanlı basit bir arayüz ile görsel kullanım sağlar. 
 
-1. **Kitap nesnesi ve temel işlemler** (ekleme, silme, listeleme)
-2. **JSON dosyası ile veri kalıcılığı**
-3. **FastAPI ile RESTful API** sunumu
+## 🚀 Özellikler
+
+- ISBN ile kitap ekleme (Open Library API entegrasyonu)
+- Kitap listeleme
+- Kitap bilgilerini güncelleme
+- Kitap silme
+- SQLite veri tabanı
+- HTML/JS arayüz
+- Docker desteği
+- Pytest ile otomatik testler
 
 ---
 
@@ -40,23 +49,9 @@ Sunucu çalıştıktan sonra Swagger UI arayüzüne şu adresten erişebilirsini
 
 ---
 
-## 🔌 API Dokümantasyonu
+## 🖥 HTML Arayüzü
 
-### GET /books
-Kütüphanedeki tüm kitapları JSON olarak listeler.
-
-### POST /books
-Girilen ISBN'e göre kitap ekler (Open Library'den veri çeker).
-
-**Body örneği:**
-```json
-{
-  "isbn": "9780140328721"
-}
-```
-
-### DELETE /books/{isbn}
-Girilen ISBN’e sahip kitabı siler.
+index.html dosyasını tarayıcıda açarak API’yi görsel olarak kullanabilirsiniz.
 
 ---
 
@@ -66,10 +61,31 @@ Girilen ISBN’e sahip kitabı siler.
 python test_library.py
 ```
 
+## 🧪 Test Çalıştırma
+
+'''bash
+pytest -v
+'''
+
+---
+
 Testler şunları kapsar:
 - Kitap ekleme/silme
 - JSON dosyasına kaydetme/yükleme
 - ISBN ile doğru eşleşme
 
 ---
+
+## 🐳 Docker ile Çalıştırma
+
+'''bash
+docker build -t kutuphane-api .
+docker run -p 8000:8000 kutuphane-api
+'''
+
+---
+
+
+## Lisans  
+MIT Lisansı altında dağıtılmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakın.
 

@@ -12,29 +12,33 @@ app = FastAPI(
 
 lib = Library()
 
-class ISBNModel(BaseModel):
-    isbn: str
+from typing import Optional
+
+class BookModel(BaseModel):
+    title: Optional[str] = None
+    author: Optional[str] = None
+    year: Optional[int] = None
 
 
-@app.get("/books", summary="Tüm Kitapları Listele")
-def get_all_books():
-    return {"books": lib.books}
+@app.get("/books")
+def get_books():
+    return {"books": [book.__dict__ for book in lib.books]}
 
-@app.post("/books", summary="ISBN ile Kitap Ekle")
-def add_book_by_isbn(isbn_model: ISBNModel):
-    success = lib.add_book_by_isbn(isbn_model.isbn)
-    if not success:
-        raise HTTPException(status_code=404, detail=f"ISBN {isbn_model.isbn} ile kitap bulunamadı veya eklenemedi.")
-    
-    
-    added_book = lib.find_book(isbn_model.isbn)
-    return {"message": "Kitap başarıyla eklendi", "book": added_book} [cite: 92]
+@app.post("/books/{isbn}")
+def add_book(isbn: str):
+    if not lib.add_book_by_isbn(isbn):
+        raise HTTPException(status_code=404, detail="Kitap eklenemedi.")
+    return {"message": "Kitap eklendi"}
 
-@app.delete("/books/{isbn}", summary="Kitabı ISBN ile Sil")
-def delete_book_by_isbn(isbn: str):
-    book = lib.find_book(isbn)
-    if not book:
-        raise HTTPException(status_code=404, detail=f"ISBN {isbn} ile silinecek kitap bulunamadı.")
-    
+@app.delete("/books/{isbn}")
+def delete_book(isbn: str):
+    if not lib.find_book(isbn):
+        raise HTTPException(status_code=404, detail="Kitap bulunamadı.")
     lib.remove_book(isbn)
-    return {"message": f"ISBN {isbn} olan kitap başarıyla silindi."}
+    return {"message": "Kitap silindi"}
+
+@app.put("/books/{isbn}")
+def update_book(isbn: str, book_data: BookModel):
+    if not lib.update_book(isbn, book_data.title, book_data.author, book_data.year):
+        raise HTTPException(status_code=404, detail="Kitap bulunamadı.")
+    return {"message": "Kitap güncellendi"}
