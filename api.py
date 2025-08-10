@@ -2,11 +2,19 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from library import Library
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(
     title="Kütüphane API",
     description="Global AI Hub Python 202 Bootcamp Projesi için API",
     version="1.0"
+)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:8001", "http://127.0.0.1:8001"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 

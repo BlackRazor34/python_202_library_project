@@ -1,10 +1,7 @@
-# Şu anda kitap verileri data/books.json içinde tutuluyor. Bunu artık books.db adlı bir SQLite veritabanına taşıyacağız
-# Python'da yerleşik olarak gelen sqlite3 modülünü kullanacağız
-
 import sqlite3
 
 def get_db_connection():
-    conn = sqlite3.connect("books.db")
+    conn = sqlite3.connect("book.db")
     conn.row_factory = sqlite3.Row
     return conn
 
