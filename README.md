@@ -51,7 +51,10 @@ Sunucu çalıştıktan sonra Swagger UI arayüzüne şu adresten erişebilirsini
 
 ## 🖥 HTML Arayüzü
 
-index.html dosyasını tarayıcıda açarak API’yi görsel olarak kullanabilirsiniz.
+'''bash
+index.html 
+'''
+dosyasını tarayıcıda açarak API’yi görsel olarak kullanabilirsiniz.
 
 ---
 
@@ -64,6 +67,7 @@ python test_library.py
 ## 🧪 Test Çalıştırma
 
 '''bash
+pip install pytest
 pytest -v
 '''
 
@@ -79,8 +83,10 @@ Testler şunları kapsar:
 ## 🐳 Docker ile Çalıştırma
 
 '''bash
+
 docker build -t kutuphane-api .
 docker run -p 8000:8000 kutuphane-api
+
 '''
 
 ---
