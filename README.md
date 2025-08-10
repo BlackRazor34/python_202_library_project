@@ -9,14 +9,14 @@ Bu proje, **Global AI Hub Python 202 Bootcamp** kapsamında geliştirilmiş bir 
 Ayrıca HTML/JS tabanlı basit bir arayüz ile görsel kullanım sağlar. 
 
 ## 📋 İçindekiler  
-- [Özellikler](#Özellikler)  
-- [Kurulum](#kurulum)  
-- [kullanım](#Kullanım) 
-- [HTML Arayüzü](#HTML-Arayüzü)  
-- [Test Senaryoları](#Test Senaryoları) 
-- [Test Çalıştırma](#Test Çalıştırma) 
-- [Docker ile Çalıştırma](#Docker ile Çalıştırma)
-- [Lisans](#Lisans)
+- [🚀 Özellikler](#özellikler)  
+- [🚀 Kurulum](#kurulum)  
+- [⚙️ Kullanım](#kullanım)  
+- [🖥 HTML Arayüzü](#html-arayüzü)  
+- [✅ Test Senaryoları](#test-senaryoları)  
+- [🧪 Test Çalıştırma](#test-çalıştırma)  
+- [🐳 Docker ile Çalıştırma](#docker-ile-çalıştırma)  
+- [Lisans](#lisans)
 
 ---
 
@@ -47,7 +47,7 @@ pip install -r requirements.txt
 
 ---
 
-## ⚙️ Kullanım
+## 
 
 ### Aşama 1 ve 2: Terminal Uygulaması
 
