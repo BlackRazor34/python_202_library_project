@@ -10,21 +10,22 @@ Ayrıca HTML/JS tabanlı basit bir arayüz ile görsel kullanım imkânı sunar.
 ---
 
 ## 📋 İçindekiler
-- [🚀 Özellikler](#özellikler)  
-- [📡 API Endpointleri](#api-endpointleri)  
-- [🚀 Kurulum](#kurulum)  
-- [⚙️ Kullanım](#kullanım)  
-- [🖥 HTML Arayüzü](#html-arayüzü)  
-- [📷 Ekran Görüntüleri](#ekran-görüntüleri)  
-- [✅ Test Senaryoları](#test-senaryoları)  
-- [🧪 Test Çalıştırma](#test-çalıştırma)  
-- [🐳 Docker ile Çalıştırma](#docker-ile-çalıştırma)  
-- [📌 Sistem Mimarisi](#sistem-mimarisi)  
-- [🤝 Katkıda Bulunma](#katkıda-bulunma)  
+- [🚀 Özellikler](#ozellikler)
+- [📡 API Endpointleri](#api-endpointleri)
+- [🚀 Kurulum](#kurulum)
+- [⚙️ Kullanım](#kullanim)
+- [🖥 HTML Arayüzü](#html-arayuzu)
+- [📷 Ekran Görüntüleri](#ekran-goruntuleri)
+- [✅ Test Senaryoları](#test-senaryolari)
+- [🧪 Test Çalıştırma](#test-calistirma)
+- [🐳 Docker ile Çalıştırma](#docker-ile-calistirma)
+- [📌 Sistem Mimarisi](#sistem-mimarisi)
+- [🤝 Katkıda Bulunma](#katkida-bulunma)
 - [📄 Lisans](#lisans)
 
 ---
 
+<a id="ozellikler"></a>
 ## 🚀 Özellikler
 - 📖 ISBN ile kitap ekleme (**Open Library API** entegrasyonu)
 - 📋 Kitap listeleme
@@ -37,6 +38,7 @@ Ayrıca HTML/JS tabanlı basit bir arayüz ile görsel kullanım imkânı sunar.
 
 ---
 
+<a id="api-endpointleri"></a>
 ## 📡 API Endpointleri
 
 | Metod  | URL               | Açıklama                   |
@@ -51,6 +53,7 @@ ReDoc: [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
 
 ---
 
+<a id="kurulum"></a>
 ## 🚀 Kurulum
 ```bash
 # Reponun klonlanması
@@ -63,6 +66,7 @@ pip install -r requirements.txt
 
 ---
 
+<a id="kullanim"></a>
 ## ⚙️ Kullanım
 
 ### Aşama 1: Terminal Uygulaması
@@ -79,6 +83,7 @@ Sunucu çalıştıktan sonra Swagger UI arayüzüne erişin:
 
 ---
 
+<a id="html-arayuzu"></a>
 ## 🖥 HTML Arayüzü
 API ile etkileşimli bir arayüz için `index.html` dosyasını tarayıcıda açabilirsiniz.
 
@@ -90,6 +95,7 @@ API ile etkileşimli bir arayüz için `index.html` dosyasını tarayıcıda aç
 
 ---
 
+<a id="ekran-goruntuleri"></a>
 ## 📷 Ekran Görüntüleri
 
 ### Swagger UI
@@ -100,6 +106,7 @@ API ile etkileşimli bir arayüz için `index.html` dosyasını tarayıcıda aç
 
 ---
 
+<a id="test-senaryolari"></a>
 ## ✅ Test Senaryoları
 Proje, aşağıdaki senaryoları kapsayan otomatik testler içerir:
 - Kitap ekleme ve silme
@@ -109,6 +116,7 @@ Proje, aşağıdaki senaryoları kapsayan otomatik testler içerir:
 
 ---
 
+<a id="test-calistirma"></a>
 ## 🧪 Test Çalıştırma
 ```bash
 pytest -v
@@ -116,6 +124,7 @@ pytest -v
 
 ---
 
+<a id="docker-ile-calistirma"></a>
 ## 🐳 Docker ile Çalıştırma
 ```bash
 # Docker imajını oluştur
@@ -127,6 +136,7 @@ docker run -p 8000:8000 kutuphane-api
 
 ---
 
+<a id="sistem-mimarisi"></a>
 ## 📌 Sistem Mimarisi
 ```
 [HTML UI]  -->  [FastAPI]  -->  [SQLite DB]
@@ -135,6 +145,7 @@ docker run -p 8000:8000 kutuphane-api
 
 ---
 
+<a id="katkida-bulunma"></a>
 ## 🤝 Katkıda Bulunma
 1. Reponunuzu fork’layın.
 2. Yeni bir branch oluşturun (`git checkout -b feature/yenilik`).
@@ -144,6 +155,6 @@ docker run -p 8000:8000 kutuphane-api
 
 ---
 
+<a id="lisans"></a>
 ## 📄 Lisans
 MIT Lisansı altında dağıtılmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakın.
-
